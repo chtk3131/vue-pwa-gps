@@ -20,29 +20,27 @@ const gpsComponent = {
   methods:{
     getLocation () {
 
-      console.log("process");
-      console.log(process);
-      console.log("navigator");
-      console.log(navigator);
+      navigator.geolocation.getCurrentPosition(this.success, this.error);
 
-     if (process.client) {
-       if (!navigator.geolocation) {
-         alert('現在地情報を取得できませんでした。お使いのブラウザでは現在地情報を利用できない可能性があります。エリアを入力してください。')
-         return
-       }
+    //  if (process.client) {
+    //    if (!navigator.geolocation) {
+    //      alert('現在地情報を取得できませんでした。お使いのブラウザでは現在地情報を利用できない可能性があります。エリアを入力してください。')
+    //      return
+    //    }
 
-       const options = {
-         enableHighAccuracy: false,
-         timeout: 5000,
-         maximumAge: 0
-       }
+    //    const options = {
+    //      enableHighAccuracy: false,
+    //      timeout: 5000,
+    //      maximumAge: 0
+    //    }
 
-        console.log(options);
+    //     console.log(options);
 
-       navigator.geolocation.getCurrentPosition(this.success, this.error, options)
-     } else {
-       alert('現在地情報を取得できませんでした。お使いのブラウザでは現在地情報を利用できない可能性があります。エリアを入力してください。')
-     }
+    //    navigator.geolocation.getCurrentPosition(this.success, this.error, options)
+    //    navigator.geolocation.getCurrentPosition(this.success, this.error)
+    //  } else {
+    //    alert('現在地情報を取得できませんでした。お使いのブラウザでは現在地情報を利用できない可能性があります。エリアを入力してください。')
+    //  }
    },
    success (position) {
      console.log("position");

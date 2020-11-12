@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.26ef4f9a0365e926f7caa9b8a56db147.js"
+  "/precache-manifest.f2f879d3817ff95f4383f8afcc7bdd2f.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "vue-pwa-gps"});
